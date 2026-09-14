@@ -1,0 +1,3 @@
+- insert:
+    - id: ui-tool-history
+      name: 'dsh-client-ui-tool-history'

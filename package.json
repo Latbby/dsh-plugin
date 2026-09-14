@@ -1,0 +1,14 @@
+{
+  "name": "dsh-plugin",
+  "private": true,
+  "version": "0.0.0",
+  "description": "DeepSeek Harness 插件集合：每个 plugins/* 子包都是一个可独立安装的 DSH 插件",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r --filter \"./plugins/*\" run build",
+    "pack:all": "pnpm -r --filter \"./plugins/*\" exec pnpm pack"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

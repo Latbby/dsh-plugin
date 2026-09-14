@@ -1,0 +1,44 @@
+{
+  "name": "dsh-client-ui-tool-history",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness Web 插件：工具记录视图（按轮次列出全部工具调用，含参数/输出/耗时/状态与筛选统计）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-plugin.mjs .",
+    "prepare": "node ../../scripts/build-plugin.mjs ."
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "web-ui"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
